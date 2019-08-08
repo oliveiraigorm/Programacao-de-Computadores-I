@@ -1,0 +1,124 @@
+m.igoroliveira@gmai.com
+
+//7 ORDENA
+
+#include<stdio.h>
+void ordena(int v[]){
+int i, h, j, aux;
+for(h=0;h<10;h++){
+for(j=h;j<10;j++){
+    if(v[h]>v[j]){
+        aux=v[h];
+        v[h]=v[j];
+        v[j]=aux;
+    }
+}
+}
+   for(i=0; i<10; i++)
+    printf("%d\n", v[i]);
+}
+main() {
+int v[10], i;
+for(i=0; i<10; i++){
+    v[i]=rand()%20;
+      printf("%d\n", v[i]);
+}
+  printf("\n");
+ordena(v);
+
+
+}
+
+//8 REPETIDOS
+
+#include<stdio.h>
+void elm(int v[]){
+int i, h, j, aux;
+for(h=0;h<10;h++){
+for(j=1;j<9;j++){
+    if(v[h]==v[j]){
+    v[j]=rand()%20;
+    }
+}
+}
+   for(i=0; i<10; i++)
+    printf("%d\n", v[i]);
+}
+main() {
+int v[10], i;
+for(i=0; i<10; i++){
+    v[i]=rand()%20;
+      printf("%d\n", v[i]);
+}
+  printf("\n");
+elm(v);
+
+
+}
+
+//SOMA MATRIZES
+
+#include<stdio.h>
+main() {
+int m1[4][4], m2[4][4], m3[4][4], i, j, e;
+printf("Digite a matriz 1: \n");
+for(i=1; i<=3; ++i){
+    for(j=1; j<=3; ++j){
+        printf("Digite o elemento a%d%d: ", i,j);
+        scanf(" %d",&e);
+        m1[i][j]=e;
+}
+}
+printf("\n Digite a matriz 2: \n");
+    for(i=1; i<=3; ++i){
+        for(j=1; j<=3; ++j){
+            printf("Digite o elemento a%d%d: ", i,j);
+            scanf(" %d",&e);
+            m2[i][j]=e;
+}
+}
+
+printf("\nMatriz 3:");
+     for(i=1; i<=3; i++){
+        printf("\n");
+        for(j=1; j<=3; j++){
+          m3[i][j] = m1[i][j]+m2[i][j];
+          printf(" %d", m3[i][j]);
+}
+     }
+}
+
+
+
+
+
+
+
+
+
+//par matriz
+
+#include<stdio.h>
+
+int par(int m[][]){
+int i, j, p=0;
+for(i=0; i<4; ++i){
+    for(j=0; j<4; ++j){
+            if(m[i][j]%2==0)
+            p++;
+}
+return p;
+}
+}
+
+main() {
+int m[4][4],i, j;
+for(i=0; i<4; ++i){
+    for(j=0; j<4; ++j){
+        m[i][j]=rand()%20;
+}
+int a=par(m);
+printf("%d", a);
+}
+}
+
